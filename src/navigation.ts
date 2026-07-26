@@ -23,6 +23,7 @@ export const headerData = {
     {
       text: 'Request Audit',
       href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request',
+      target: '_blank', // FIX: Forces browser to open email client directly
       icon: 'tabler:mail',
     },
   ],
@@ -45,15 +46,13 @@ export const footerData = {
         { text: 'How It Works', href: getPermalink('/#process') },
         { text: 'FAQ', href: getPermalink('/#faq') },
         { text: 'Blog Articles', href: getBlogPermalink() },
-        { text: 'Services Overview', href: getPermalink('/services') },
       ],
     },
     {
       title: 'Contact',
       links: [
         { text: 'AcquireLift@gmail.com', href: 'mailto:AcquireLift@gmail.com' },
-        { text: 'Certified Google Partner', href: 'mailto:AcquireLift@gmail.com' },
-        { text: 'Async / Text-First Service', href: 'mailto:AcquireLift@gmail.com' },
+        { text: 'Request Audit via Email', href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request' },
       ],
     },
   ],
@@ -66,6 +65,6 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    © ${new Date().getFullYear()} AcquireLift · Helping organizations acquire more and grow smarter. All rights reserved.
+    © ${new Date().getFullYear()} AcquireLift · Certified Google Partner & Ad Grant Specialist. All rights reserved.
   `,
 };
