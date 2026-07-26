@@ -22,8 +22,7 @@ export const headerData = {
   actions: [
     {
       text: 'Request Audit',
-      href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request',
-      target: '_blank', // FIX: Forces browser to open email client directly
+      href: getPermalink('/contact'), // Points to your visual Contact page
       icon: 'tabler:mail',
     },
   ],
