@@ -12,10 +12,10 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
+  <!-- HeroText Widget -->
   <HeroText tagline="Contact AcquireLift" title="Fast, Async Email Communication" />
 
+  <!-- Features2 Widget -->
   <Features2
     title="Get In Touch with AcquireLift"
     subtitle="We operate on a 100% text-first and async model. This respects your time and allows us to deliver well-researched audit reports with actionable screenshots."
@@ -44,16 +44,60 @@ const metadata = {
     ]}
   />
 
+  <!-- STATICFORMS CONTACT FORM -->
+  <section class="max-w-4xl mx-auto px-4 py-8">
+    <div class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl p-6 md:p-8 shadow-sm">
+      <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Request Your Free Google Ad Grant Audit</h3>
+      <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm">
+        Fill out the form below to request a free text-based account audit delivered straight to your inbox.
+      </p>
+
+      <form action="https://api.staticforms.xyz/submit" method="POST" class="space-y-4">
+        <!-- StaticForms Key -->
+        <input type="hidden" name="accessKey" value="sf_a846693e58821ba9394185bc" />
+        <input type="hidden" name="subject" value="New Google Ad Grant Audit Request from AcquireLift" />
+        <input type="hidden" name="redirectTo" value="https://astrowind-920.pages.dev/contact?submitted=true" />
+        <input type="text" name="honeypot" style="display:none" />
+
+        <div>
+          <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Your Name</label>
+          <input type="text" name="name" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-transparent rounded-md text-gray-900 dark:text-white" placeholder="e.g. Jane Doe" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Non-Profit Email</label>
+          <input type="email" name="replyTo" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-transparent rounded-md text-gray-900 dark:text-white" placeholder="jane@charity.org" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Non-Profit Website URL</label>
+          <input type="text" name="website" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-transparent rounded-md text-gray-900 dark:text-white" placeholder="https://yourcharity.org" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Current Ad Grant Status / Details</label>
+          <textarea name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 bg-transparent rounded-md text-gray-900 dark:text-white" placeholder="Tell us if your account is suspended, struggling with 5% CTR, or unspent..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 px-6 text-white bg-black dark:bg-white dark:text-black font-semibold rounded-md transition hover:opacity-90">
+          Submit Audit Request →
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CallToAction Widget -->
   <CallToAction
     actions={[
       {
         variant: 'primary',
         text: 'Email AcquireLift@gmail.com',
         href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request',
+        target: '_blank',
         icon: 'tabler:mail',
       },
     ]}
-    title="Ready for Your Free Google Ad Grant Audit?"
+    title="Prefer Direct Email?"
     subtitle="Email us your website URL or Google Ads Customer ID today to get started."
   />
 </Layout>
