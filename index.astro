@@ -1,0 +1,247 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AcquireLift | Google Ad Grant Specialist & Audits',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="🏆 Certified Google Partner"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request Free Account Audit',
+        href: 'mailto:AcquireLift@gmail.com?subject=Free%20Google%20Ad%20Grant%20Audit',
+        icon: 'tabler:mail',
+      },
+      { text: 'Explore Services', href: '#services' },
+    ]}
+  >
+    <Fragment slot="title">
+      Unlock & Scale Your <span class="text-primary dark:text-blue-400">$10,000/Mo</span> Google Ad Grant
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Certified Google Partner helping non-profits secure, audit, and optimize free Google Search advertising budgets.
+      Get a fast, text-based audit delivered straight to your inbox—no sales calls required.
+    </Fragment>
+  </Hero>
+
+  <!-- Key Impact Stats ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Monthly Ad Credit Target', amount: '$10,000' },
+      { title: 'Average Account CTR', amount: '> 10%' },
+      { title: 'Audit Turnaround Time', amount: '24-48 hrs' },
+      { title: 'Communication Model', amount: '100% Async' },
+    ]}
+  />
+
+  <!-- Featured Offer Card (Audit Breakdown) **************** -->
+
+  <Content
+    id="audit"
+    isReversed
+    tagline="Free Diagnostic Report"
+    title="📩 What Is Included In Your Free Account Audit?"
+    items={[
+      {
+        title: '1. 5% CTR Compliance Check',
+        description:
+          'Flagging keywords, low quality scores, and account structure errors that put your $10,000/mo grant at risk of immediate suspension.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: '2. Wasted Spend & Keyword Scan',
+        description:
+          'Eliminating low-converting terms eating up your ad credit so your budget drives genuine non-profit supporters.',
+        icon: 'tabler:search',
+      },
+      {
+        title: '3. GA4 Conversion Tracking Audit',
+        description:
+          'Ensuring donation, newsletter, and volunteer conversions are firing properly to comply with Google Grant policies.',
+        icon: 'tabler:chart-dots-2',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80',
+      alt: 'Google Ad Grant Audit Dashboard Report',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        An in-depth review sent straight to your email within 24–48 hours.
+      </h3>
+      <p class="text-muted dark:text-slate-400">
+        No tedious sales meetings or high-pressure pitches. Just clear, text-based findings with actionable steps you
+        can execute right away.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50/50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Credibility & Proof Cards ****************** -->
+
+  <Features2
+    title="Credibility & Proven Track Record"
+    subtitle="Built specifically for non-profits needing reliable, high-performance Google Ad Grant management."
+    tagline="Trust & Experience"
+    columns={2}
+    items={[
+      {
+        title: 'Certified Google Partner Status',
+        description:
+          'Official partner credentials specializing in 501(c)(3) and global charity accounts. We understand the specific regulatory policies governing non-profit grant accounts.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: '5-Star Upwork Reviews & Account Proof',
+        description:
+          "Proven track record of scaling unspent grant budgets while maintaining CTRs well above Google's mandatory 5% policy threshold.",
+        icon: 'tabler:star',
+      },
+    ]}
+  />
+
+  <!-- Services Grid ****************** -->
+
+  <Features
+    id="services"
+    tagline="Our Core Offerings"
+    title="Specialized Google Ad Grant Services"
+    subtitle="Tailored specifically for non-profit directors, marketing heads, and charity managers looking to maximize impact."
+    items={[
+      {
+        title: '1. Account Audits',
+        description:
+          'Comprehensive diagnostic of quality scores, keyword performance, negative match lists, and strict policy compliance.',
+        icon: 'tabler:file-search',
+      },
+      {
+        title: '2. 5% CTR & Policy Recovery',
+        description:
+          'Fixing suspension warnings, single-word keyword violations, non-converting traffic, and smart bidding strategy setups.',
+        icon: 'tabler:shield-check-filled',
+      },
+      {
+        title: '3. Grant Application Setup',
+        description:
+          'Complete TechSoup validation, Google for Nonprofits activation, and initial campaign structure setup from scratch.',
+        icon: 'tabler:square-plus',
+      },
+      {
+        title: '4. Monthly Campaign Management',
+        description:
+          'Ongoing keyword expansion, compelling ad copywriting, conversion optimization, and GA4 event tracking.',
+        icon: 'tabler:adjustments-horizontal',
+      },
+    ]}
+  />
+
+  <!-- Process / How It Works ****************** -->
+
+  <Steps
+    id="process"
+    title="How It Works — Simple, Async & Fast"
+    tagline="3-Step Workflow"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Send Your Details</span>',
+        description:
+          'Email <a href="mailto:AcquireLift@gmail.com" class="text-primary underline">AcquireLift@gmail.com</a> with your website URL or Google Ads Customer ID.',
+        icon: 'tabler:mail-forward',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Manual Deep-Dive Audit</span>',
+        description:
+          'We perform a comprehensive manual audit of your account compliance, keyword effectiveness, and conversion tracking.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Actionable Text Report</span>',
+        description:
+          'You receive a detailed text report with clear, step-by-step fixes delivered straight to your inbox within 24-48 hours.',
+        icon: 'tabler:circle-check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Async Email Communication for Non-Profit Audits',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id="faq"
+    title="Frequently Asked Questions"
+    subtitle="Everything you need to know about our async Google Ad Grant audit and management model."
+    tagline="Got Questions?"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Why do you prefer text/email communication over calls?',
+        description:
+          'Async communication respects your time. It allows us to deliver well-researched audit reports with screenshots and exact instructions rather than rushed, generic answers on a call.',
+      },
+      {
+        title: 'What happens if my Google Ad Grant account is suspended?',
+        description:
+          'We identify the policy violation (CTR drops, single-word keywords, or conversion errors) and help prepare a compliant appeal to restore your account quickly.',
+      },
+      {
+        title: 'Who qualifies for the $10,000/mo Google Ad Grant?',
+        description:
+          'Registered 501(c)(3) organizations or local country charities with a secure, functioning website. (Hospitals, schools, and governmental entities are excluded by Google policy).',
+      },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Google Ad Grants Insights & Guides"
+    information="Read our latest articles designed to help non-profit marketing directors maximize free Google Search ad budgets while staying 100% compliant."
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Email AcquireLift@gmail.com',
+        href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Scale Your <span class="text-primary dark:text-blue-400">$10,000/Mo</span> Grant?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Email AcquireLift@gmail.com today for your free, text-based account audit delivered in 24-48 hours.
+    </Fragment>
+  </CallToAction>
+</Layout>

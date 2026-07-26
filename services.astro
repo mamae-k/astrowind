@@ -1,0 +1,121 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Services | AcquireLift — Google Ad Grant Specialist',
+  description:
+    'Explore AcquireLift Google Ad Grant services for non-profits: free audits, 5% CTR policy recovery, setup, and monthly management.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="AcquireLift Services"
+    title="Specialized Google Ad Grant Management for Non-Profits"
+    subtitle="We help charities and 501(c)(3) non-profits unlock, audit, and scale their $10,000/month in free Google Search ad credits with 100% policy compliance."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request Free Audit',
+        href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request',
+        icon: 'tabler:mail',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AcquireLift Ad Grant Audit Services',
+    }}
+  />
+
+  <!-- Core Services Grid ************** -->
+
+  <Features
+    title="Our 4 Specialized Non-Profit Offerings"
+    subtitle="Every service is designed for maximum compliance, high CTR performance, and zero wasted ad credit."
+    columns={2}
+    items={[
+      {
+        title: '1. Account Audits (Free & Premium)',
+        description:
+          'In-depth review of quality scores, keyword CTRs, negative match lists, and compliance vulnerabilities. Delivered in 24-48 hours via text report.',
+        icon: 'tabler:file-search',
+      },
+      {
+        title: '2. 5% CTR & Policy Recovery',
+        description:
+          'Expert assistance for accounts facing suspension notices due to low CTR (<5%), single-word keywords, or invalid conversion tracking.',
+        icon: 'tabler:shield-check-filled',
+      },
+      {
+        title: '3. Grant Application Setup',
+        description:
+          'Full-service assistance with TechSoup validation, Google for Nonprofits activation, and initial campaign creation.',
+        icon: 'tabler:square-plus',
+      },
+      {
+        title: '4. Monthly Campaign Management',
+        description:
+          'Continuous keyword expansion, compelling ad copywriting, conversion tracking optimization, and monthly performance reporting.',
+        icon: 'tabler:adjustments-horizontal',
+      },
+    ]}
+  />
+
+  <!-- Detailed Breakdown **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Certified Google Partner Expertise',
+        description:
+          'We specialize strictly in Google Ad Grants for non-profits, ensuring your campaigns follow all 501(c)(3) guidelines.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: '100% Async / Text-First Workflow',
+        description:
+          'Save time without scheduling calls. All communication and reports are delivered clearly in writing.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Full $10,000/Mo Budget Utilization',
+        description:
+          'We leverage Smart Bidding and long-tail keyword strategies to break past the standard $2.00 manual bid cap.',
+        icon: 'tabler:trending-up',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=870&q=80',
+      alt: 'Ad Grant Performance',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Why Non-Profits Choose AcquireLift
+      </h3>
+      Empowering charities to reach donors, volunteers, and beneficiaries without spending a dime on ad credits.
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Email AcquireLift@gmail.com',
+        href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Ready to Maximize Your $10,000/Mo Ad Grant?"
+    subtitle="Email us today for your free, text-based account audit delivered in 24-48 hours."
+  />
+</Layout>
