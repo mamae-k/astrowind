@@ -1,79 +1,59 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact | AcquireLift',
+  description:
+    'Contact AcquireLift for non-profit Google Ad Grant audits and management. Async and email-first communication model.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
-
-  <!-- Features2 Widget ************** -->
+  <HeroText tagline="Contact AcquireLift" title="Fast, Async Email Communication" />
 
   <Features2
-    title="We are here to help!"
+    title="Get In Touch with AcquireLift"
+    subtitle="We operate on a 100% text-first and async model. This respects your time and allows us to deliver well-researched audit reports with actionable screenshots."
+    columns={2}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
+        title: 'Direct Email',
+        description: 'AcquireLift@gmail.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: 'Audit Turnaround',
+        description: 'Fast delivery within 24-48 hours',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Credentials',
+        description: 'Certified Google Partner & 5-Star Upwork Specialist',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Target Audience',
+        description: 'Non-profit directors, founders, and charity marketing heads',
+        icon: 'tabler:heart-handshake',
       },
     ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Email AcquireLift@gmail.com',
+        href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Ready for Your Free Google Ad Grant Audit?"
+    subtitle="Email us your website URL or Google Ads Customer ID today to get started."
   />
 </Layout>
