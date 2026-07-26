@@ -5,7 +5,18 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
 ---
 
-<form>
+<form action="https://api.staticforms.xyz/submit" method="POST">
+  <!-- StaticForms Access Key -->
+  <input type="hidden" name="accessKey" value="sf_a846693e58821ba9394185bc" />
+  
+  <!-- Email Subject Line -->
+  <input type="hidden" name="subject" value="New Google Ad Grant Audit Request from AcquireLift" />
+  
+  <!-- Redirect back to your site after submit -->
+  <input type="hidden" name="redirectTo" value="https://astrowind-920.pages.dev/contact?submitted=true" />
+  
+  <!-- Spam Protection (Honeypot field) -->
+  <input type="text" name="honeypot" style="display:none" />
   {
     inputs &&
       inputs.map(
