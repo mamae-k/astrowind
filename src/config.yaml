@@ -1,6 +1,7 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: "AcquireLift |  Google Ad Grant Specialist"
+  description: "Certified Google Partner helping nonprofits audit, optimize, and manage their $10,000/month Google Ad Grant. Free account audits delivered in 24-48 hours."
+  site: 'https://acquirelift.com'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +10,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: 'AcquireLift | Google Ad Grant Specialist'
+    template: '%s — AcquireLift'
+  description: 'Certified Google Partner helping nonprofits audit, optimize, and manage their $10,000/month Google Ad Grant. Free account audits delivered in 24-72 hours.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: AcquireLift
     images:
       - url: '~/assets/images/default.png'
         width: 1200

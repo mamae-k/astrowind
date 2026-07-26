@@ -1,247 +1,647 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
 const metadata = {
-  title: 'AcquireLift | Google Ad Grant Specialist & Audits',
+  title: 'AcquireLift | Google Ad Grant Specialist',
+  description: 'Certified Google Partner helping nonprofits audit, optimize, and manage their $10,000/month Google Ad Grant. Free account audits delivered in 24-48 hours.',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Section 1: Hero -->
+  <section id="hero" class="relative bg-[#10243E] text-white py-20 lg:py-28 overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur rounded-full px-4 py-2 text-sm mb-6 border border-white/10">
+        <span class="w-2 h-2 bg-[#10B981] rounded-full animate-pulse"></span>
+        Available for New Clients · Certified Google Partner
+      </div>
 
-  <Hero
-    tagline="🏆 Certified Google Partner"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Request Free Account Audit',
-        href: 'mailto:AcquireLift@gmail.com?subject=Free%20Google%20Ad%20Grant%20Audit',
-        icon: 'tabler:mail',
-      },
-      { text: 'Explore Services', href: '#services' },
-    ]}
-  >
-    <Fragment slot="title">
-      Unlock & Scale Your <span class="text-primary dark:text-blue-400">$10,000/Mo</span> Google Ad Grant
-    </Fragment>
+      <!-- Headline -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
+        I Help Nonprofits Turn Their 
+        <span class="text-[#10B981]">$10,000/Month Grant</span> 
+        Into Real, Measurable Impact.
+      </h1>
 
-    <Fragment slot="subtitle">
-      Certified Google Partner helping non-profits secure, audit, and optimize free Google Search advertising budgets.
-      Get a fast, text-based audit delivered straight to your inbox—no sales calls required.
-    </Fragment>
-  </Hero>
-
-  <!-- Key Impact Stats ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Monthly Ad Credit Target', amount: '$10,000' },
-      { title: 'Average Account CTR', amount: '> 10%' },
-      { title: 'Audit Turnaround Time', amount: '24-48 hrs' },
-      { title: 'Communication Model', amount: '100% Async' },
-    ]}
-  />
-
-  <!-- Featured Offer Card (Audit Breakdown) **************** -->
-
-  <Content
-    id="audit"
-    isReversed
-    tagline="Free Diagnostic Report"
-    title="📩 What Is Included In Your Free Account Audit?"
-    items={[
-      {
-        title: '1. 5% CTR Compliance Check',
-        description:
-          'Flagging keywords, low quality scores, and account structure errors that put your $10,000/mo grant at risk of immediate suspension.',
-        icon: 'tabler:alert-triangle',
-      },
-      {
-        title: '2. Wasted Spend & Keyword Scan',
-        description:
-          'Eliminating low-converting terms eating up your ad credit so your budget drives genuine non-profit supporters.',
-        icon: 'tabler:search',
-      },
-      {
-        title: '3. GA4 Conversion Tracking Audit',
-        description:
-          'Ensuring donation, newsletter, and volunteer conversions are firing properly to comply with Google Grant policies.',
-        icon: 'tabler:chart-dots-2',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80',
-      alt: 'Google Ad Grant Audit Dashboard Report',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        An in-depth review sent straight to your email within 24–48 hours.
-      </h3>
-      <p class="text-muted dark:text-slate-400">
-        No tedious sales meetings or high-pressure pitches. Just clear, text-based findings with actionable steps you
-        can execute right away.
+      <!-- Subheadline -->
+      <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl">
+        Most nonprofits <strong class="text-white">waste or lose their Google Ad Grant</strong> due to policy violations, low Quality Scores, and poor account structure. I fix that — and I have the results to prove it.
       </p>
-    </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50/50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+      <!-- CTAs -->
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#contact" class="bg-[#10B981] hover:bg-[#059669] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg shadow-[#10B981]/20">
+          Book Your Free Audit
+        </a>
+        <a href="#case-studies" class="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+          View Case Studies →
+        </a>
+      </div>
 
-  <!-- Credibility & Proof Cards ****************** -->
+      <!-- Trust Bar -->
+      <div class="mt-8 flex flex-wrap items-center gap-4 text-sm text-slate-400">
+        <span class="text-[#10B981]">★★★★★</span> 5.0 on Upwork
+        <span class="hidden md:inline">·</span>
+        Certified Google Partner
+        <span class="hidden md:inline">·</span>
+        40+ accounts managed
+      </div>
 
-  <Features2
-    title="Credibility & Proven Track Record"
-    subtitle="Built specifically for non-profits needing reliable, high-performance Google Ad Grant management."
-    tagline="Trust & Experience"
-    columns={2}
-    items={[
-      {
-        title: 'Certified Google Partner Status',
-        description:
-          'Official partner credentials specializing in 501(c)(3) and global charity accounts. We understand the specific regulatory policies governing non-profit grant accounts.',
-        icon: 'tabler:certificate',
-      },
-      {
-        title: '5-Star Upwork Reviews & Account Proof',
-        description:
-          "Proven track record of scaling unspent grant budgets while maintaining CTRs well above Google's mandatory 5% policy threshold.",
-        icon: 'tabler:star',
-      },
-    ]}
-  />
+      <!-- Google Partner Badge -->
+      <div class="mt-6">
+        <a href="https://www.google.com/partners/agency?id=6835380641" target="_blank" rel="noopener noreferrer" class="inline-block hover:opacity-90 transition-opacity">
+          <img src="https://www.gstatic.com/partners/badge/images/2025/PartnerBadgeClickable.svg" alt="Google Partner" class="h-16" />
+        </a>
+      </div>
+    </div>
 
-  <!-- Services Grid ****************** -->
+    <!-- Floating Stats (decorative, right side on desktop) -->
+    <div class="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 space-y-4 max-w-xs">
+      <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/10 shadow-xl">
+        <div class="text-[#10B981] text-2xl font-bold">1,200%</div>
+        <div class="text-xs text-slate-300">Traffic increase — Case Study #1</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/10 shadow-xl">
+        <div class="text-[#10B981] text-2xl font-bold">8.0/10</div>
+        <div class="text-xs text-slate-300">Avg. Quality Score achieved</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/10 shadow-xl">
+        <div class="text-[#10B981] text-2xl font-bold">65%</div>
+        <div class="text-xs text-slate-300">More high-value goal completions</div>
+      </div>
+    </div>
+  </section>
 
-  <Features
-    id="services"
-    tagline="Our Core Offerings"
-    title="Specialized Google Ad Grant Services"
-    subtitle="Tailored specifically for non-profit directors, marketing heads, and charity managers looking to maximize impact."
-    items={[
-      {
-        title: '1. Account Audits',
-        description:
-          'Comprehensive diagnostic of quality scores, keyword performance, negative match lists, and strict policy compliance.',
-        icon: 'tabler:file-search',
-      },
-      {
-        title: '2. 5% CTR & Policy Recovery',
-        description:
-          'Fixing suspension warnings, single-word keyword violations, non-converting traffic, and smart bidding strategy setups.',
-        icon: 'tabler:shield-check-filled',
-      },
-      {
-        title: '3. Grant Application Setup',
-        description:
-          'Complete TechSoup validation, Google for Nonprofits activation, and initial campaign structure setup from scratch.',
-        icon: 'tabler:square-plus',
-      },
-      {
-        title: '4. Monthly Campaign Management',
-        description:
-          'Ongoing keyword expansion, compelling ad copywriting, conversion optimization, and GA4 event tracking.',
-        icon: 'tabler:adjustments-horizontal',
-      },
-    ]}
-  />
+  <!-- Section 2: Stats Bar -->
+  <section id="stats" class="bg-[#F8FAFC] py-12 border-b border-slate-200">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <div class="text-3xl md:text-4xl font-bold text-[#10243E]">40+</div>
+          <div class="text-sm text-slate-600 mt-1">Nonprofit Accounts Managed</div>
+        </div>
+        <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <div class="text-3xl md:text-4xl font-bold text-[#10243E]">$10K</div>
+          <div class="text-sm text-slate-600 mt-1">Monthly Grant Value Per Client</div>
+        </div>
+        <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <div class="text-3xl md:text-4xl font-bold text-[#10243E]">5%+</div>
+          <div class="text-sm text-slate-600 mt-1">Avg. CTR (2× Google's requirement)</div>
+        </div>
+        <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <div class="text-3xl md:text-4xl font-bold text-[#10243E]">5.0 ★</div>
+          <div class="text-sm text-slate-600 mt-1">Upwork Rating · Google Certified</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Process / How It Works ****************** -->
+  <!-- Section 3: Services -->
+  <section id="services" class="py-20 bg-[#F8FAFC]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-[#10B981] text-sm font-semibold uppercase tracking-wider">What I Do</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#10243E] mt-2">Everything Your Grant Needs to Thrive</h2>
+        <p class="text-slate-600 mt-4 max-w-2xl mx-auto">
+          From compliance firefighting to long-term growth — I handle the full lifecycle of your Google Ad Grant so you can focus on your mission.
+        </p>
+      </div>
 
-  <Steps
-    id="process"
-    title="How It Works — Simple, Async & Fast"
-    tagline="3-Step Workflow"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Send Your Details</span>',
-        description:
-          'Email <a href="mailto:AcquireLift@gmail.com" class="text-primary underline">AcquireLift@gmail.com</a> with your website URL or Google Ads Customer ID.',
-        icon: 'tabler:mail-forward',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Manual Deep-Dive Audit</span>',
-        description:
-          'We perform a comprehensive manual audit of your account compliance, keyword effectiveness, and conversion tracking.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Actionable Text Report</span>',
-        description:
-          'You receive a detailed text report with clear, step-by-step fixes delivered straight to your inbox within 24-48 hours.',
-        icon: 'tabler:circle-check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Async Email Communication for Non-Profit Audits',
-    }}
-  />
+      <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <!-- Service 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-[#10B981]/10 rounded-xl flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[#10B981] text-2xl">search</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#10243E] mb-2">Grant Revitalization & Compliance Audit</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Comprehensive account review to diagnose and fix "Policy Issue" flags, keyword suspensions, and low Quality Scores. I restore suspended accounts and build a solid compliance foundation so you never lose the grant again.
+          </p>
+          <span class="inline-block mt-4 text-xs font-semibold bg-[#10B981]/10 text-[#10B981] px-3 py-1 rounded-full">Most Popular</span>
+        </div>
 
-  <!-- FAQs Widget ******************* -->
+        <!-- Service 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-[#10B981]/10 rounded-xl flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[#10B981] text-2xl">rocket_launch</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#10243E] mb-2">Full-Service Grant Management</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            End-to-end management of Search and Performance Max campaigns — including keyword research, ad copywriting, bid strategy, negative keyword lists, and monthly performance reporting.
+          </p>
+          <span class="inline-block mt-4 text-xs font-semibold bg-blue-50 text-blue-600 px-3 py-1 rounded-full">Ongoing</span>
+        </div>
 
-  <FAQs
-    id="faq"
-    title="Frequently Asked Questions"
-    subtitle="Everything you need to know about our async Google Ad Grant audit and management model."
-    tagline="Got Questions?"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why do you prefer text/email communication over calls?',
-        description:
-          'Async communication respects your time. It allows us to deliver well-researched audit reports with screenshots and exact instructions rather than rushed, generic answers on a call.',
-      },
-      {
-        title: 'What happens if my Google Ad Grant account is suspended?',
-        description:
-          'We identify the policy violation (CTR drops, single-word keywords, or conversion errors) and help prepare a compliant appeal to restore your account quickly.',
-      },
-      {
-        title: 'Who qualifies for the $10,000/mo Google Ad Grant?',
-        description:
-          'Registered 501(c)(3) organizations or local country charities with a secure, functioning website. (Hospitals, schools, and governmental entities are excluded by Google policy).',
-      },
-    ]}
-  />
+        <!-- Service 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-[#10B981]/10 rounded-xl flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[#10B981] text-2xl">bar_chart</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#10243E] mb-2">GA4 & GTM Conversion Tracking</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Robust Google Tag Manager and GA4 setups so you know exactly how many donations, volunteer applications, or newsletter subscribers your ads generate. No more flying blind.
+          </p>
+          <span class="inline-block mt-4 text-xs font-semibold bg-purple-50 text-purple-600 px-3 py-1 rounded-full">Data-Driven</span>
+        </div>
 
-  <!-- HighlightedPosts Widget ******* -->
+        <!-- Service 4 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-[#10B981]/10 rounded-xl flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-[#10B981] text-2xl">lightbulb</span>
+          </div>
+          <h3 class="text-xl font-bold text-[#10243E] mb-2">Nonprofit PPC Strategy & Consulting</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Need a second opinion or strategic roadmap? I offer consulting sessions for organizations that manage their own grant but want expert guidance on keyword strategy and campaign architecture.
+          </p>
+          <span class="inline-block mt-4 text-xs font-semibold bg-orange-50 text-orange-600 px-3 py-1 rounded-full">Advisory</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <BlogLatestPosts
-    title="Google Ad Grants Insights & Guides"
-    information="Read our latest articles designed to help non-profit marketing directors maximize free Google Search ad budgets while staying 100% compliant."
-  />
+  <!-- Section 4: Case Studies -->
+  <section id="case-studies" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-[#10B981] text-sm font-semibold uppercase tracking-wider">Proven Results</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#10243E] mt-2">Real Nonprofits. Real Numbers.</h2>
+      </div>
 
-  <!-- CallToAction Widget *********** -->
+      <!-- Case Study 1 -->
+      <div class="max-w-4xl mx-auto mb-12 bg-[#F8FAFC] rounded-2xl p-8 border border-slate-100 shadow-sm">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">3 → 40+ clicks/day</span>
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">1,200% traffic lift</span>
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">CTR &gt; 5%</span>
+        </div>
+        <h3 class="text-2xl font-bold text-[#10243E] mb-4">Case Study 01: From "Dormant" to High-Performance</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="font-semibold text-red-600 mb-2">⚠ Challenge</h4>
+            <p class="text-sm text-slate-600">A nonprofit's Ad Grant account had been inactive for months due to complex policy issues and keyword suspensions. They were receiving fewer than <strong>3 clicks per day</strong>.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-amber-600 mb-2">⚡ Strategy</h4>
+            <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+              <li>Full compliance audit to resolve "Policy Issue" flags</li>
+              <li>Restructured into tightly themed ad groups</li>
+              <li>"High-Intent" keyword strategy targeting immediate help seekers</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-[#10B981] mb-2">✓ Result</h4>
+            <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+              <li>Scaled from 3 clicks to <strong>40+ clicks/day</strong> within 3 weeks</li>
+              <li>CTR over <strong>5%</strong> — exceeding Google's requirement</li>
+              <li>Account fully reinstated with growth trajectory established</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Email AcquireLift@gmail.com',
-        href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Ready to Scale Your <span class="text-primary dark:text-blue-400">$10,000/Mo</span> Grant?
-    </Fragment>
+      <!-- Case Study 2 -->
+      <div class="max-w-4xl mx-auto mb-12 bg-[#F8FAFC] rounded-2xl p-8 border border-slate-100 shadow-sm">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">+65% high-value conversions</span>
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">80/20 traffic insight</span>
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">Waste eliminated</span>
+        </div>
+        <h3 class="text-2xl font-bold text-[#10243E] mb-4">Case Study 02: Data-Driven Scaling with GTM</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="font-semibold text-red-600 mb-2">⚠ Challenge</h4>
+            <p class="text-sm text-slate-600">The nonprofit was getting steady traffic, but had no idea whether visitors were donating, signing up for programs, or just browsing. They were <strong>"flying blind"</strong> with zero conversion data.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-amber-600 mb-2">⚡ Strategy</h4>
+            <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+              <li>Built robust GTM conversion tracking framework from scratch</li>
+              <li>Configured custom events for donations, signups, and newsletter subs</li>
+              <li>Paused low-value keywords, doubled down on converters</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-[#10B981] mb-2">✓ Result</h4>
+            <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+              <li>Discovered <strong>20% of traffic drove 80% of conversions</strong></li>
+              <li>Reallocated budget to high-converting segments</li>
+              <li>Increased high-value goal completions by <strong>65%</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <Fragment slot="subtitle">
-      Email AcquireLift@gmail.com today for your free, text-based account audit delivered in 24-48 hours.
-    </Fragment>
-  </CallToAction>
+      <!-- Case Study 3 -->
+      <div class="max-w-4xl mx-auto bg-[#F8FAFC] rounded-2xl p-8 border border-slate-100 shadow-sm">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">Quality Score: 8/10 avg.</span>
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">-30% cost per conversion</span>
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">Top ad positions</span>
+        </div>
+        <h3 class="text-2xl font-bold text-[#10243E] mb-4">Case Study 03: The Relevance Overhaul</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="font-semibold text-red-600 mb-2">⚠ Challenge</h4>
+            <p class="text-sm text-slate-600">A nonprofit struggled with chronically <strong>low Quality Score</strong>, causing ads to rarely appear in top positions. Generic ad copy out of sync with landing pages was the core culprit.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-amber-600 mb-2">⚡ Strategy</h4>
+            <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+              <li>Rewrote all ad copy using Responsive Search Ads matched to user intent</li>
+              <li>Landing page consultation to align content with search queries</li>
+              <li>Focused on long-tail, mission-relevant keywords</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-[#10B981] mb-2">✓ Result</h4>
+            <ul class="text-sm text-slate-600 space-y-1 list-disc list-inside">
+              <li>Average Quality Score of <strong>8/10</strong> across the account</li>
+              <li>Ads consistently in <strong>top 1-3 positions</strong></li>
+              <li>Reduced Cost Per Conversion by <strong>30%</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#contact" class="bg-[#10B981] hover:bg-[#059669] text-white px-8 py-4 rounded-lg font-semibold text-lg inline-block transition-colors shadow-lg shadow-[#10B981]/20">
+          Get Your Free Account Audit →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Process -->
+  <section id="process" class="py-20 bg-[#10243E] text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-[#10B981] text-sm font-semibold uppercase tracking-wider">My Process</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">A Clear System. Predictable Results.</h2>
+        <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
+          Every engagement follows a proven 4-step framework built specifically for the Google Ad Grant environment.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-[#10B981] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 text-white shadow-lg shadow-[#10B981]/30">1</div>
+          <h3 class="text-xl font-bold mb-2">Discovery & Audit</h3>
+          <p class="text-slate-400 text-sm">I review your existing account (or build from scratch), identify all compliance gaps, and document a prioritized action plan.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-[#10B981] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 text-white shadow-lg shadow-[#10B981]/30">2</div>
+          <h3 class="text-xl font-bold mb-2">Account Restructure</h3>
+          <p class="text-slate-400 text-sm">Rebuild campaign architecture with tightly themed ad groups, high-intent keywords, and compelling RSA ad copy.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-[#10B981] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 text-white shadow-lg shadow-[#10B981]/30">3</div>
+          <h3 class="text-xl font-bold mb-2">Tracking & Measurement</h3>
+          <p class="text-slate-400 text-sm">Deploy GA4 + GTM conversion tracking so every donation click, volunteer form, and newsletter signup is measurable.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-[#10B981] rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 text-white shadow-lg shadow-[#10B981]/30">4</div>
+          <h3 class="text-xl font-bold mb-2">Optimize & Scale</h3>
+          <p class="text-slate-400 text-sm">Monthly analysis to cut waste, expand what works, and continuously grow your mission's reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: About -->
+  <section id="about" class="py-20 bg-[#F8FAFC]">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+        <!-- Left: Illustration container -->
+        <div class="bg-[#10243E] rounded-2xl p-12 text-center border border-slate-800 shadow-xl">
+          <span class="material-symbols-outlined text-[#10B981] text-8xl">psychology</span>
+          <p class="text-white/60 mt-4 text-sm">Analytical Mind. Mission-Driven Heart.</p>
+        </div>
+
+        <!-- Right: Content -->
+        <div>
+          <span class="text-[#10B981] text-sm font-semibold uppercase tracking-wider">About Me</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#10243E] mt-2">Analytical Mind. Mission-Driven Heart.</h2>
+          <p class="text-slate-600 mt-4 leading-relaxed">
+            My journey in digital marketing began with a simple mission: help the organizations that make the world a better place actually reach the people who need them. After earning my <strong>Google Ads Search Certification</strong>, I spent years volunteering for nonprofits — giving me an insider understanding of the unique challenges, constraints, and compliance requirements of the Google Ad Grant program.
+          </p>
+          <p class="text-slate-600 mt-4 leading-relaxed">
+            Today I am a <strong>5.0-rated specialist on Upwork</strong> who has managed dozens of nonprofit accounts across the United States and globally. I don't just "manage ads" — I take complete ownership of your Grant project, treating every dollar of your $10,000/month budget as if it were my own.
+          </p>
+
+          <!-- Values -->
+          <div class="grid grid-cols-3 gap-4 mt-8">
+            <div class="text-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+              <span class="material-symbols-outlined text-[#10B981] text-2xl">zoom_out</span>
+              <h4 class="font-semibold text-[#10243E] text-sm mt-2">Transparency</h4>
+              <p class="text-xs text-slate-500 mt-1">You always know where your budget goes</p>
+            </div>
+            <div class="text-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+              <span class="material-symbols-outlined text-[#10B981] text-2xl">bar_chart_4_bars</span>
+              <h4 class="font-semibold text-[#10243E] text-sm mt-2">Data-Driven</h4>
+              <p class="text-xs text-slate-500 mt-1">Every decision backed by GA4</p>
+            </div>
+            <div class="text-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+              <span class="material-symbols-outlined text-[#10B981] text-2xl">handshake</span>
+              <h4 class="font-semibold text-[#10243E] text-sm mt-2">Integrity</h4>
+              <p class="text-xs text-slate-500 mt-1">Your grant treated like my own $10K</p>
+            </div>
+          </div>
+
+          <!-- Certs -->
+          <div class="mt-8 flex flex-wrap gap-4">
+            <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-100">
+              <span class="material-symbols-outlined text-[#10B981]">verified</span>
+              <span class="text-sm font-semibold text-[#10243E]">Google Ads Search Certified</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-100">
+              <span class="material-symbols-outlined text-[#10B981]">verified</span>
+              <span class="text-sm font-semibold text-[#10243E]">Google Partner</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-100">
+              <span class="text-[#10B981]">★★★★★</span>
+              <span class="text-sm font-semibold text-[#10243E]">Upwork 5.0 · 40+ contracts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Testimonials -->
+  <section id="testimonials" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-[#10B981] text-sm font-semibold uppercase tracking-wider">Client Feedback</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#10243E] mt-2">What Nonprofits Say</h2>
+        <p class="text-slate-500 mt-2 text-sm">Actual results from real organizations.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-[#F8FAFC] rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="text-4xl text-[#10B981] mb-4">"</div>
+          <p class="text-slate-700 text-sm leading-relaxed mb-6">
+            Mamae completely transformed our dormant Ad Grant account. Within three weeks our daily clicks went from near zero to over 40. The compliance issues that had plagued us for months were resolved methodically and professionally.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-[#10243E] rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-sm">account_balance</span>
+            </div>
+            <div>
+              <div class="font-semibold text-[#10243E] text-sm">Executive Director</div>
+              <div class="text-xs text-slate-500">U.S.-Based Nonprofit Organization</div>
+              <div class="text-[#10B981] text-xs">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#F8FAFC] rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="text-4xl text-[#10B981] mb-4">"</div>
+          <p class="text-slate-700 text-sm leading-relaxed mb-6">
+            Before working with Mamae, we had traffic but no idea if it converted to anything meaningful. After the GTM setup he built, we can finally see which keywords drive actual donations. Game-changing for our fundraising strategy.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-[#10243E] rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-sm">favorite</span>
+            </div>
+            <div>
+              <div class="font-semibold text-[#10243E] text-sm">Digital Programs Manager</div>
+              <div class="text-xs text-slate-500">Humanitarian Nonprofit, USA</div>
+              <div class="text-[#10B981] text-xs">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#F8FAFC] rounded-2xl p-8 border border-slate-100 shadow-sm">
+          <div class="text-4xl text-[#10B981] mb-4">"</div>
+          <p class="text-slate-700 text-sm leading-relaxed mb-6">
+            Our Quality Scores went from 3 to an average of 8 in under two months. Mamae's landing page consultation alone was worth every penny. Our ads now consistently appear in top positions for our most important keywords.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-[#10243E] rounded-full flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-sm">public</span>
+            </div>
+            <div>
+              <div class="font-semibold text-[#10243E] text-sm">Communications Director</div>
+              <div class="text-xs text-slate-500">Environmental Nonprofit, USA</div>
+              <div class="text-[#10B981] text-xs">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: FAQ -->
+  <section id="faq" class="py-20 bg-[#F8FAFC]">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="text-center mb-12">
+        <span class="text-[#10B981] text-sm font-semibold uppercase tracking-wider">Common Questions</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#10243E] mt-2">Everything You've Been Wondering</h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <details class="bg-white rounded-xl shadow-sm border border-slate-200/80 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-semibold text-[#10243E]">
+            What is the Google Ad Grant for nonprofits?
+            <span class="text-[#10B981] text-xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+            The Google Ad Grant provides eligible 501(c)(3) nonprofits with up to <strong>$10,000 USD per month</strong> in free Google Search advertising budget. It allows organizations to run text-based search ads to promote their programs, attract volunteers, and drive donations — completely free of charge. The key is using it correctly, which is where expert management makes all the difference.
+          </div>
+        </details>
+
+        <!-- FAQ Item 2 -->
+        <details class="bg-white rounded-xl shadow-sm border border-slate-200/80 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-semibold text-[#10243E]">
+            Why did my Google Ad Grant account get suspended?
+            <span class="text-[#10B981] text-xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+            The most common reasons: <strong>Quality Scores below 3/10</strong>, single-word or overly broad keywords, missing or broken conversion tracking, CTR falling below 5% for two consecutive months, landing pages with thin or irrelevant content, or general Google Advertising Policy violations. A structured audit identifies all issues and maps out a clear remediation plan.
+          </div>
+        </details>
+
+        <!-- FAQ Item 3 -->
+        <details class="bg-white rounded-xl shadow-sm border border-slate-200/80 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-semibold text-[#10243E]">
+            How quickly can a suspended or dormant account be revived?
+            <span class="text-[#10B981] text-xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+            In most cases, a dormant or suspended account can be restored to full compliance within <strong>1-3 weeks</strong> through a structured audit and account restructure. I've taken accounts from 3 clicks/day to 40+ clicks/day within that window. The timeline depends on the complexity of violations and Google's review process, but I handle all communication with Google on your behalf.
+          </div>
+        </details>
+
+        <!-- FAQ Item 4 -->
+        <details class="bg-white rounded-xl shadow-sm border border-slate-200/80 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-semibold text-[#10243E]">
+            What is a good CTR for a Google Ad Grant account?
+            <span class="text-[#10B981] text-xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+            Google requires a minimum account-level CTR of <strong>5% per month</strong> to maintain your grant. High-performing accounts I manage consistently achieve <strong>8-15% CTR</strong> through precise keyword-to-ad-to-landing-page alignment. Falling below 5% for two consecutive months triggers automatic account suspension.
+          </div>
+        </details>
+
+        <!-- FAQ Item 5 -->
+        <details class="bg-white rounded-xl shadow-sm border border-slate-200/80 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-semibold text-[#10243E]">
+            Do I need conversion tracking to keep my Google Ad Grant active?
+            <span class="text-[#10B981] text-xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+            Yes — since 2018, Google requires all Ad Grant accounts to have <strong>at least one active conversion action</strong> configured. Beyond compliance, proper GA4 + GTM conversion tracking is what separates organizations that get traffic from those that get <em>results</em>. I set up tracking for all meaningful actions: donations, volunteer signups, newsletter subscriptions, phone calls, and more.
+          </div>
+        </details>
+
+        <!-- FAQ Item 6 -->
+        <details class="bg-white rounded-xl shadow-sm border border-slate-200/80 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-semibold text-[#10243E]">
+            Can nonprofits use Performance Max campaigns with the Ad Grant?
+            <span class="text-[#10B981] text-xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+            Yes. The Google Ad Grant now supports <strong>Performance Max (PMax) campaigns</strong> alongside standard Search campaigns, allowing nonprofits to reach potential supporters across Google Search, Display, Gmail, YouTube, and Maps — all within the $10K/month grant. Proper conversion tracking is essential to unlock PMax's full potential.
+          </div>
+        </details>
+
+        <!-- FAQ Item 7 -->
+        <details class="bg-white rounded-xl shadow-sm border border-slate-200/80 group">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-semibold text-[#10243E]">
+            How much does Google Ad Grant management cost?
+            <span class="text-[#10B981] text-xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-slate-600 text-sm leading-relaxed">
+            The first step — a <strong>full account audit</strong> — is always free. This gives you a clear picture of what's wrong, what's working, and what's possible before any commitment. Ongoing management fees are tailored to your organization's scope and needs. Contact me using the form below and I'll respond within 24 hours with a custom proposal.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Contact -->
+  <section id="contact" class="py-20 bg-[#10243E] text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <!-- Left: Contact Info -->
+        <div>
+          <span class="text-[#10B981] text-sm font-semibold uppercase tracking-wider">Get In Touch</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2">Let's Turn Your Grant Into Growth.</h2>
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            Don't leave your $10,000/month grant to chance. Whether you have a suspended account, an underperforming one, or you're starting fresh — I'll build a strategy that converts.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <a href="mailto:Mamedewel@gmail.com" class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+              <span class="material-symbols-outlined text-[#10B981]">mail</span>
+              <div>
+                <div class="font-semibold">Email Me Directly</div>
+                <div class="text-sm text-slate-400">Mamedewel@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="https://wa.me/251927059884" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+              <span class="material-symbols-outlined text-[#10B981]">chat</span>
+              <div>
+                <div class="font-semibold">Chat on WhatsApp</div>
+                <div class="text-sm text-slate-400">Quick response guaranteed</div>
+              </div>
+            </a>
+
+            <a href="https://www.upwork.com/freelancers/~014af4bc3641ee20e9?mp_source=share" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+              <span class="material-symbols-outlined text-[#10B981]">work</span>
+              <div>
+                <div class="font-semibold">Hire on Upwork</div>
+                <div class="text-sm text-slate-400">5.0 ★ · 100% Job Success</div>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mamae" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+              <span class="material-symbols-outlined text-[#10B981]">person</span>
+              <div>
+                <div class="font-semibold">Connect on LinkedIn</div>
+                <div class="text-sm text-slate-400">/in/mamae</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form & Calendar Embed -->
+        <div class="bg-white/5 rounded-2xl p-6 border border-white/10 shadow-xl">
+          <h3 class="text-xl font-bold mb-2">Book Your Free Account Audit</h3>
+          <p class="text-slate-400 text-sm mb-6">Fill out the quick request below or choose direct email/WhatsApp. Audit reports are delivered within 24-48 hours.</p>
+
+          <form id="audit-form" class="space-y-4" action="mailto:Mamedewel@gmail.com" method="GET" enctype="text/plain">
+            <div>
+              <label for="name" class="block text-xs font-semibold text-slate-300 mb-1">Your Name / Organization</label>
+              <input type="text" id="name" name="subject" required placeholder="e.g. Hope Wildlife Foundation" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-[#10B981]" />
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+              <input type="email" id="email" name="body_email" required placeholder="you@nonprofit.org" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-[#10B981]" />
+            </div>
+
+            <div>
+              <label for="website" class="block text-xs font-semibold text-slate-300 mb-1">Website URL or Google Ads CID</label>
+              <input type="text" id="website" name="website" placeholder="www.yournonprofit.org or 123-456-7890" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-[#10B981]" />
+            </div>
+
+            <div>
+              <label for="notes" class="block text-xs font-semibold text-slate-300 mb-1">Current Grant Status / Challenges</label>
+              <textarea id="notes" name="body" rows="3" placeholder="e.g. Account suspended, CTR below 5%, low donations, starting new grant..." class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-[#10B981]"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-[#10B981] hover:bg-[#059669] text-white font-semibold rounded-lg transition-colors shadow-lg shadow-[#10B981]/20 flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-lg">send</span>
+              Submit Audit Request
+            </button>
+          </form>
+
+          <div id="form-success" class="hidden mt-4 p-4 bg-[#10B981]/20 border border-[#10B981] text-[#10B981] rounded-lg text-sm text-center">
+            ✓ Request created! Your mail client will open shortly, or you can email <strong>Mamedewel@gmail.com</strong> directly.
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10">
+            <h4 class="text-sm font-semibold text-slate-300 mb-2">Prefer a Calendar Booking?</h4>
+            <div id="my-cal-inline" class="w-full rounded-lg min-h-[300px] bg-white/5 border border-white/10 p-4 text-center flex flex-col items-center justify-center text-slate-400 text-sm">
+              <span class="material-symbols-outlined text-4xl text-[#10B981] mb-2">calendar_month</span>
+              <p>Instant booking integrated.</p>
+              <a href="mailto:Mamedewel@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Booking" class="mt-3 text-xs text-[#10B981] hover:underline font-semibold">
+                Click here to request custom time window →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('audit-form');
+    const successMsg = document.getElementById('form-success');
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        const name = (document.getElementById('name') as HTMLInputElement)?.value || '';
+        const email = (document.getElementById('email') as HTMLInputElement)?.value || '';
+        const website = (document.getElementById('website') as HTMLInputElement)?.value || '';
+        const notes = (document.getElementById('notes') as HTMLTextAreaElement)?.value || '';
+
+        const subject = encodeURIComponent(`Google Ad Grant Audit Request: ${name}`);
+        const body = encodeURIComponent(`Hello Mamae,\n\nI would like to request a free Google Ad Grant audit.\n\nOrganization/Name: ${name}\nEmail: ${email}\nWebsite/CID: ${website}\nNotes/Status: ${notes}\n\nThank you!`);
+
+        window.location.href = `mailto:Mamedewel@gmail.com?subject=${subject}&body=${body}`;
+
+        if (successMsg) {
+          successMsg.classList.remove('hidden');
+        }
+      });
+    }
+  });
+</script>
