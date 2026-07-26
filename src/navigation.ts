@@ -1,15 +1,16 @@
-import { getPermalink } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    { text: 'Services', href: '#services' },
-    { text: 'Case Studies', href: '#case-studies' },
-    { text: 'How I Work', href: '#process' },
-    { text: 'About', href: '#about' },
-    { text: 'FAQ', href: '#faq' },
+    { text: 'Services', href: getPermalink('/#services') },
+    { text: 'Case Studies', href: getPermalink('/#case-studies') },
+    { text: 'How I Work', href: getPermalink('/#process') },
+    { text: 'About', href: getPermalink('/#about') },
+    { text: 'Blog', href: getBlogPermalink() },
+    { text: 'FAQ', href: getPermalink('/#faq') },
   ],
   actions: [
-    { text: 'Book Free Audit', href: '#contact', variant: 'primary' },
+    { text: 'Book Free Audit', href: getPermalink('/#contact'), variant: 'primary' },
   ],
 };
 
@@ -18,19 +19,28 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Grant Revitalization & Audit', href: '#services' },
-        { text: 'Full-Service Grant Management', href: '#services' },
-        { text: 'GA4 & GTM Conversion Tracking', href: '#services' },
-        { text: 'Nonprofit PPC Strategy', href: '#services' },
+        { text: 'Grant Revitalization & Audit', href: getPermalink('/#services') },
+        { text: 'Full-Service Grant Management', href: getPermalink('/#services') },
+        { text: 'GA4 & GTM Conversion Tracking', href: getPermalink('/#services') },
+        { text: 'Nonprofit PPC Strategy', href: getPermalink('/#services') },
+      ],
+    },
+    {
+      title: 'Blog & Guides',
+      links: [
+        { text: 'All Articles', href: getBlogPermalink() },
+        { text: 'Ad Grant Audit Checklist', href: getPermalink('/google-ad-grant-audit-checklist') },
+        { text: 'Maintaining a 10%+ CTR', href: getPermalink('/maintain-10-percent-ctr-google-ad-grants') },
+        { text: 'GA4 Conversion Tracking', href: getPermalink('/ga4-gtm-conversion-tracking-nonprofits') },
       ],
     },
     {
       title: 'Quick Links',
       links: [
-        { text: 'Case Studies', href: '#case-studies' },
-        { text: 'My Process', href: '#process' },
-        { text: 'About', href: '#about' },
-        { text: 'FAQ', href: '#faq' },
+        { text: 'Case Studies', href: getPermalink('/#case-studies') },
+        { text: 'My Process', href: getPermalink('/#process') },
+        { text: 'About', href: getPermalink('/#about') },
+        { text: 'FAQ', href: getPermalink('/#faq') },
       ],
     },
     {
