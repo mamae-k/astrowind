@@ -1,0 +1,59 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Google Ad Grant CTR Requirements | AcquireLift',
+  description:
+    'An introductory guide to CTR expectations and why relevance matters for Google Ad Grant accounts.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-20 sm:py-28">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-primary dark:text-[#10B981]">Starter cluster article</p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-[#10243E] dark:text-white sm:text-5xl">
+          Google Ad Grant CTR requirements: why relevance drives account health.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+          CTR performance is one of the clearest indicators that your account is sending the right signal to Google. A healthy ad experience usually means the keywords, ad copy, and landing page all line up.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 lg:grid-cols-[1.4fr_0.8fr]">
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-[#10243E]">
+          <h2 class="text-xl font-semibold text-[#10243E] dark:text-white">Key ideas</h2>
+          <ul class="mt-6 space-y-3 text-slate-600 dark:text-slate-300">
+            <li>• CTR is a signal of relevance and usefulness</li>
+            <li>• Weak keyword targeting can drag down performance quickly</li>
+            <li>• Stronger landing page alignment often improves the overall account experience</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 dark:border-slate-800 dark:bg-[#0F172A]/60">
+          <h2 class="text-xl font-semibold text-[#10243E] dark:text-white">Related resources</h2>
+          <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li><a href="/services/google-ad-grant-management" class="font-medium text-primary dark:text-[#10B981]">Management service</a></li>
+            <li><a href="/resources/google-ad-grant-conversion-tracking" class="font-medium text-primary dark:text-[#10B981]">Conversion tracking</a></li>
+            <li><a href="/services/google-ad-grant-audit" class="font-medium text-primary dark:text-[#10B981]">Audit service</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    title="Need help improving your account’s CTR and overall health?"
+    subtitle="A focused audit can show whether the issue is keyword relevance, ad messaging, or the experience on your website."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request Your Free Audit',
+        href: '/#contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

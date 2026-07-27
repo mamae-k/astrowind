@@ -1,0 +1,59 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Google Ad Grant Eligibility | AcquireLift',
+  description:
+    'A nonprofit-friendly overview of the eligibility and account readiness questions behind Google Ad Grants.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-20 sm:py-28">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.24em] text-primary dark:text-[#10B981]">Starter cluster article</p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-[#10243E] dark:text-white sm:text-5xl">
+          Google Ad Grant eligibility: what nonprofits should know before they apply.
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+          Eligibility is only one part of the picture. A nonprofit can meet the basic requirements and still struggle if the account setup or website experience is weak.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 lg:grid-cols-[1.4fr_0.8fr]">
+        <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-[#10243E]">
+          <h2 class="text-xl font-semibold text-[#10243E] dark:text-white">What this article covers</h2>
+          <ul class="mt-6 space-y-3 text-slate-600 dark:text-slate-300">
+            <li>• The nonprofit status and account access questions that shape eligibility</li>
+            <li>• Why account readiness matters even when the application is approved</li>
+            <li>• The role of website quality, tracking, and policy awareness in a healthy launch</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8 dark:border-slate-800 dark:bg-[#0F172A]/60">
+          <h2 class="text-xl font-semibold text-[#10243E] dark:text-white">Related resources</h2>
+          <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            <li><a href="/resources/google-ad-grant-approval-checklist" class="font-medium text-primary dark:text-[#10B981]">Approval checklist</a></li>
+            <li><a href="/resources/google-ad-grant-ctr-requirements" class="font-medium text-primary dark:text-[#10B981]">CTR requirements</a></li>
+            <li><a href="/services/google-ad-grant-audit" class="font-medium text-primary dark:text-[#10B981]">Free audit service</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    title="Not sure whether your nonprofit is ready to launch or recover a grant account?"
+    subtitle="A quick audit can help you understand whether the issue is eligibility, account structure, website readiness, or tracking."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request Your Free Audit',
+        href: '/#contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

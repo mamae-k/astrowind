@@ -1,31 +1,14 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './src/utils/permalinks';
 
 export const headerData = {
   links: [
-    {
-      text: 'Services',
-      href: getPermalink('/#services'),
-    },
-    {
-      text: 'How It Works',
-      href: getPermalink('/#process'),
-    },
-    {
-      text: 'FAQ',
-      href: getPermalink('/#faq'),
-    },
-    {
-      text: 'Blog',
-      href: getBlogPermalink(),
-    },
+    { text: 'Services', href: getPermalink('/services') },
+    { text: 'Resources', href: getPermalink('/resources') },
+    { text: 'Case Studies', href: getPermalink('/#case-studies') },
+    { text: 'About', href: getPermalink('/#about') },
+    { text: 'FAQ', href: getPermalink('/#faq') },
   ],
-  actions: [
-    {
-      text: 'Request Audit',
-      href: 'mailto:AcquireLift@gmail.com?subject=Google%20Ad%20Grant%20Audit%20Request',
-      icon: 'tabler:mail',
-    },
-  ],
+  actions: [{ text: 'Request Free Audit', href: getPermalink('/#contact'), variant: 'primary' as const }],
 };
 
 export const footerData = {
@@ -33,27 +16,36 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Free Account Audit', href: 'mailto:AcquireLift@gmail.com?subject=Free%20Google%20Ad%20Grant%20Audit' },
-        { text: '5% CTR & Policy Recovery', href: getPermalink('/#services') },
-        { text: 'Grant Application Setup', href: getPermalink('/#services') },
-        { text: 'Monthly Campaign Management', href: getPermalink('/#services') },
+        { text: 'Google Ad Grant Services', href: getPermalink('/services') },
+        { text: 'Grant Revitalization & Audit', href: getPermalink('/services') },
+        { text: 'GA4 & GTM Conversion Tracking', href: getPermalink('/services') },
+        { text: 'Nonprofit PPC Strategy', href: getPermalink('/services') },
+      ],
+    },
+    {
+      title: 'Resources',
+      links: [
+        { text: 'All Resources', href: getPermalink('/resources') },
+        { text: 'The Complete Google Ad Grants Guide', href: getPermalink('/resources/google-ad-grants-guide') },
+        { text: 'Grant-Ready Website Checklist', href: getPermalink('/resources/grant-ready-website-checklist') },
       ],
     },
     {
       title: 'Quick Links',
       links: [
-        { text: 'How It Works', href: getPermalink('/#process') },
+        { text: 'Case Studies', href: getPermalink('/#case-studies') },
+        { text: 'About', href: getPermalink('/#about') },
         { text: 'FAQ', href: getPermalink('/#faq') },
-        { text: 'Blog Articles', href: getBlogPermalink() },
-        { text: 'Services Overview', href: getPermalink('/services') },
+        { text: 'Free Audit', href: getPermalink('/#contact') },
       ],
     },
     {
       title: 'Contact',
       links: [
         { text: 'AcquireLift@gmail.com', href: 'mailto:AcquireLift@gmail.com' },
-        { text: 'Certified Google Partner', href: 'mailto:AcquireLift@gmail.com' },
-        { text: 'Async / Text-First Service', href: 'mailto:AcquireLift@gmail.com' },
+        { text: 'WhatsApp Support', href: 'https://wa.me/251927059884' },
+        { text: 'Hire on Upwork', href: 'https://www.upwork.com/freelancers/~014af4bc3641ee20e9?mp_source=share' },
+        { text: 'LinkedIn', href: 'https://www.linkedin.com/in/mamae' },
       ],
     },
   ],
@@ -63,9 +55,9 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:AcquireLift@gmail.com' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/mamae' },
   ],
   footNote: `
-    © ${new Date().getFullYear()} AcquireLift · Helping organizations acquire more and grow smarter. All rights reserved.
+    © ${new Date().getFullYear()} AcquireLift · Google Ad Grant authority for nonprofits. All rights reserved.
   `,
 };

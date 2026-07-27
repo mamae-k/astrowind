@@ -21,25 +21,24 @@ const metadata = {
   <!-- Section 1: Hero -->
   <Hero
     id="hero"
-    tagline="🟢 Available for New Clients · Certified Google Partner"
+    tagline="Google Ad Grant support for nonprofits"
     actions={[
       {
         variant: 'primary',
-        text: 'Book Your Free Audit',
+        text: 'Request Your Free Audit',
         href: '#contact',
         icon: 'tabler:mail',
       },
-      { text: 'View Case Studies →', href: '#case-studies' },
+      { text: 'Explore Resources →', href: '/resources' },
     ]}
   >
     <Fragment slot="title">
-      I Help Nonprofits Turn Their <span class="text-primary dark:text-[#10B981]">$10,000/Month Grant</span> Into Real, Measurable
-      Impact.
+      I help nonprofits use their Google Ad Grant with <span class="text-primary dark:text-[#10B981]">less guesswork and more focus</span>.
     </Fragment>
-
+  
     <Fragment slot="subtitle">
-      Most nonprofits <strong class="text-page">waste or lose their Google Ad Grant</strong> due to policy violations, low
-      Quality Scores, and poor account structure. I fix that — and I have the transparent data to prove it.
+      Most nonprofits do not need a flashy strategy. They need a clear setup, a cleaner account, and a practical plan for the
+      next steps.
     </Fragment>
 
     <Fragment slot="image">
@@ -81,10 +80,10 @@ const metadata = {
   <Stats
     id="stats"
     stats={[
-      { title: 'Nonprofit Accounts Managed', amount: '40+' },
-      { title: 'Monthly Grant Value / Client', amount: '$10K' },
-      { title: 'Avg. Account CTR (2× Google Minimum)', amount: '5%+' },
-      { title: 'Upwork Rating · Certified Google Partner', amount: '5.0 ★' },
+      { title: 'Nonprofit Accounts Supported', amount: '40+' },
+      { title: 'Grant Value Per Client', amount: '$10K' },
+      { title: 'Audit Turnaround', amount: '24–72 hrs' },
+      { title: 'Support Style', amount: 'Text-first' },
     ]}
   />
 
@@ -92,31 +91,31 @@ const metadata = {
   <Features
     id="services"
     tagline="What I Do"
-    title="Everything Your Grant Needs to Thrive"
-    subtitle="From compliance firefighting to long-term organic growth — I handle the full lifecycle of your Google Ad Grant so you can focus on your mission."
+    title="A practical way to improve grant health, structure, and growth"
+    subtitle="I focus on the parts that usually cause the most friction: account structure, tracking, compliance, and messaging that reflects the work your nonprofit actually does."
     items={[
       {
-        title: 'Grant Revitalization & Compliance Audit',
+        title: 'Grant Revitalization & Compliance Review',
         description:
-          'Comprehensive account review to diagnose and fix "Policy Issue" flags, keyword suspensions, and low Quality Scores. I restore suspended accounts and build a solid compliance foundation.',
+          'A clear review of your account setup, policy issues, and early structure so you know what needs attention first.',
         icon: 'tabler:search',
       },
       {
-        title: 'Full-Service Grant Management',
+        title: 'Ongoing Grant Management',
         description:
-          'End-to-end management of Search and Performance Max campaigns — including keyword research, ad copywriting, bid strategy, negative keyword lists, and monthly reporting.',
+          'Hands-on support with keyword reviews, search terms, ad copy, and account maintenance so the grant stays useful over time.',
         icon: 'tabler:rocket',
       },
       {
         title: 'GA4 & GTM Conversion Tracking',
         description:
-          'Robust Google Tag Manager and GA4 setups so you know exactly how many donations, volunteer applications, or newsletter subscribers your ads generate.',
+          'Robust Google Tag Manager and GA4 setups so donations, volunteer forms, and other meaningful actions are measurable.',
         icon: 'tabler:chart-bar',
       },
       {
-        title: 'Nonprofit PPC Strategy & Consulting',
+        title: 'Practical PPC Strategy Support',
         description:
-          'Strategic roadmaps for organizations managing their own grant but wanting expert guidance on keyword architecture, policy compliance, and scaling.',
+          'Guidance for teams that want help making better decisions without overcomplicating the process.',
         icon: 'tabler:bulb',
       },
     ]}
@@ -128,8 +127,11 @@ const metadata = {
       <div class="text-center mb-12">
         <span class="text-[#10B981] text-sm font-semibold uppercase tracking-wider">Proven Results</span>
         <h2 class="text-3xl md:text-4xl font-bold text-[#10243E] dark:text-white mt-2">
-          Real Nonprofits. Real Numbers.
+          A few stories from nonprofits that needed a clearer path.
         </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
+          Some organizations needed a full reset. Others just needed a simpler structure, better tracking, and a more useful account.
+        </p>
       </div>
 
       <!-- Case Study 1 -->
@@ -139,10 +141,10 @@ const metadata = {
         <div class="flex flex-wrap gap-2 mb-4">
           <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">3 → 40+ clicks/day</span>
           <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">1,200% traffic lift</span>
-          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">CTR &gt; 5%</span>
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">Cleaner account structure</span>
         </div>
         <h3 class="text-2xl font-bold text-[#10243E] dark:text-white mb-4">
-          Case Study 01: From "Dormant" to High-Performance
+          Case Study 01: When a dormant account starts working again
         </h3>
         <div class="grid md:grid-cols-3 gap-6">
           <div>
@@ -164,7 +166,7 @@ const metadata = {
             <h4 class="font-semibold text-[#10B981] mb-2">✓ Result</h4>
             <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1 list-disc list-inside">
               <li>Scaled from 3 clicks to <strong>40+ clicks/day</strong> within 3 weeks</li>
-              <li>CTR over <strong>5%</strong> — exceeding Google's requirement</li>
+              <li>The account became easier to manage and more relevant to the audience</li>
               <li>Account fully reinstated with growth trajectory established</li>
             </ul>
           </div>
@@ -215,7 +217,7 @@ const metadata = {
 
       <!-- Case Study 3 -->
       <div
-        class="max-w-4xl mx-auto bg-[#F8FAFC] dark:bg-[#10243E] rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm"
+        class="max-w-4xl mx-auto mb-12 bg-[#F8FAFC] dark:bg-[#10243E] rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm"
       >
         <div class="flex flex-wrap gap-2 mb-4">
           <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full"
@@ -249,6 +251,45 @@ const metadata = {
               <li>Average Quality Score of <strong>8/10</strong> across the account</li>
               <li>Ads consistently in <strong>top 1-3 positions</strong></li>
               <li>Reduced Cost Per Conversion by <strong>30%</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 4 -->
+      <div
+        class="max-w-4xl mx-auto bg-[#F8FAFC] dark:bg-[#10243E] rounded-2xl p-8 border border-slate-200 dark:border-slate-800 shadow-sm"
+      >
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">Less guesswork</span>
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">Clearer reporting</span>
+          <span class="text-xs font-semibold bg-[#10B981] text-white px-3 py-1 rounded-full">More relevant traffic</span>
+        </div>
+        <h3 class="text-2xl font-bold text-[#10243E] dark:text-white mb-4">
+          Case Study 04: A small team that needed the grant to feel manageable
+        </h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="font-semibold text-red-600 mb-2">⚠ Challenge</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-300">
+              The nonprofit was not trying to build a complicated advertising machine. They had a small team, limited time,
+              and a grant account that was active but hard to interpret.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-amber-600 mb-2">⚡ Strategy</h4>
+            <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1 list-disc list-inside">
+              <li>Simplified the campaign structure around the organization’s core services</li>
+              <li>Removed low-value themes and tightened the message around real user intent</li>
+              <li>Set up tracking so the team could see what mattered without reading through endless reports</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-[#10B981] mb-2">✓ Result</h4>
+            <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-1 list-disc list-inside">
+              <li>The account became easier to review and easier to explain to leadership</li>
+              <li>Traffic became more relevant to the work the organization actually does</li>
+              <li>The team had a clearer path for the next improvement instead of constant guesswork</li>
             </ul>
           </div>
         </div>
@@ -317,8 +358,8 @@ const metadata = {
   <!-- Section 7: Organic Blog & Content Showcase (The Core Engine) -->
   <BlogLatestPosts
     id="blog"
-    title="Google Ad Grants Guides & Organic Insights"
-    information="Read our latest articles designed to help nonprofit marketing leaders maximize free Google Search ad budgets, maintain 10%+ CTRs, and set up bulletproof GA4 tracking."
+    title="Resources for Nonprofits Building Grant-Ready Websites and Stronger Ad Accounts"
+    information="Explore practical guidance on Google Ad Grants, grant-ready websites, compliance, and conversion tracking so your content works as a real authority hub—not just a blog."
   />
 
   <!-- Section 8: FAQs -->
@@ -336,7 +377,7 @@ const metadata = {
       {
         title: 'Why did my Google Ad Grant account get suspended?',
         description:
-          'Common causes include Quality Scores below 3/10, single-word keywords, missing conversion tracking, CTR falling below 5% for two consecutive months, or general advertising policy violations.',
+          'Common causes include policy issues, weak keyword structure, missing conversion tracking, weak landing page relevance, or account settings that drift over time.',
       },
       {
         title: 'How quickly can a suspended or dormant account be revived?',
@@ -344,9 +385,9 @@ const metadata = {
           'In most cases, dormant or suspended accounts can be restored to full compliance within 1-3 weeks through a structured audit and campaign restructure.',
       },
       {
-        title: 'What is a good CTR for a Google Ad Grant account?',
+        title: 'What makes a Google Ad Grant account healthy?',
         description:
-          'Google requires a minimum 5% monthly CTR. High-performing accounts managed by AcquireLift consistently achieve 8% to 15% CTR through tight keyword alignment.',
+          'There is no single number we rely on. A healthy account usually comes from relevant keywords, clear ad copy, and landing pages that match what people are actually searching for.',
       },
       {
         title: 'Do I need conversion tracking to keep my Google Ad Grant active?',
@@ -368,10 +409,9 @@ const metadata = {
         <!-- Left: Contact Details -->
         <div>
           <span class="text-[#10B981] text-sm font-semibold uppercase tracking-wider">Get In Touch</span>
-          <h2 class="text-3xl md:text-4xl font-bold mt-2">Let's Turn Your Grant Into Growth.</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2">Let’s make your grant easier to manage.</h2>
           <p class="text-slate-400 mt-4 leading-relaxed">
-            Don't leave your $10,000/month grant to chance. Whether you have a suspended account, an underperforming
-            one, or you're starting fresh — I'll build a strategy that converts.
+            If your account feels messy, underused, or stuck, I can help you sort the next steps. The goal is usually not more complexity — it is a clearer plan and a better use of the grant you already have.
           </p>
 
           <div class="mt-8 space-y-4">
@@ -493,7 +533,12 @@ const metadata = {
     const banner = document.getElementById('success-banner');
     const btn = document.getElementById('submit-btn');
 
-    form?.addEventListener('submit', async (e) => {
+    if (!form || !banner || !btn) {
+      return;
+    }
+
+    form.addEventListener('submit', async (e) => {
+
       e.preventDefault();
       btn.textContent = 'Sending Audit Request...';
       btn.disabled = true;
@@ -514,7 +559,12 @@ const metadata = {
           btn.textContent = '➢ Submit Audit Request';
           btn.disabled = false;
         }
+<<<<<<< HEAD
       } catch (err) {
+=======
+      } catch (error) {
+        console.error(error);
+>>>>>>> 50a7629 (ajax success message added)
         alert('Network error. Please try again or email AcquireLift@gmail.com directly.');
         btn.textContent = '➢ Submit Audit Request';
         btn.disabled = false;

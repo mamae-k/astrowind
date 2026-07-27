@@ -1,17 +1,14 @@
-import { getPermalink, getBlogPermalink } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    { text: 'Services', href: getPermalink('/#services') },
+    { text: 'Services', href: getPermalink('/services') },
+    { text: 'Resources', href: getPermalink('/resources') },
     { text: 'Case Studies', href: getPermalink('/#case-studies') },
-    { text: 'How I Work', href: getPermalink('/#process') },
     { text: 'About', href: getPermalink('/#about') },
-    { text: 'Blog', href: getBlogPermalink() },
     { text: 'FAQ', href: getPermalink('/#faq') },
   ],
-  actions: [
-    { text: 'Book Free Audit', href: getPermalink('/#contact'), variant: 'primary' },
-  ],
+  actions: [{ text: 'Request Free Audit', href: getPermalink('/#contact'), variant: 'primary' as const }],
 };
 
 export const footerData = {
@@ -19,28 +16,27 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Grant Revitalization & Audit', href: getPermalink('/#services') },
-        { text: 'Full-Service Grant Management', href: getPermalink('/#services') },
-        { text: 'GA4 & GTM Conversion Tracking', href: getPermalink('/#services') },
-        { text: 'Nonprofit PPC Strategy', href: getPermalink('/#services') },
+        { text: 'Google Ad Grant Services', href: getPermalink('/services') },
+        { text: 'Grant Revitalization & Audit', href: getPermalink('/services') },
+        { text: 'GA4 & GTM Conversion Tracking', href: getPermalink('/services') },
+        { text: 'Nonprofit PPC Strategy', href: getPermalink('/services') },
       ],
     },
     {
-      title: 'Blog & Guides',
+      title: 'Resources',
       links: [
-        { text: 'All Articles', href: getBlogPermalink() },
-        { text: 'Ad Grant Audit Checklist', href: getPermalink('/google-ad-grant-audit-checklist') },
-        { text: 'Maintaining a 10%+ CTR', href: getPermalink('/maintain-10-percent-ctr-google-ad-grants') },
-        { text: 'GA4 Conversion Tracking', href: getPermalink('/ga4-gtm-conversion-tracking-nonprofits') },
+        { text: 'All Resources', href: getPermalink('/resources') },
+        { text: 'The Complete Google Ad Grants Guide', href: getPermalink('/resources/google-ad-grants-guide') },
+        { text: 'Grant-Ready Website Checklist', href: getPermalink('/resources/grant-ready-website-checklist') },
       ],
     },
     {
       title: 'Quick Links',
       links: [
         { text: 'Case Studies', href: getPermalink('/#case-studies') },
-        { text: 'My Process', href: getPermalink('/#process') },
         { text: 'About', href: getPermalink('/#about') },
         { text: 'FAQ', href: getPermalink('/#faq') },
+        { text: 'Free Audit', href: getPermalink('/#contact') },
       ],
     },
     {
@@ -62,6 +58,6 @@ export const footerData = {
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/mamae' },
   ],
   footNote: `
-    © ${new Date().getFullYear()} AcquireLift · Google Ad Grant Specialist for Nonprofits. All rights reserved.
+    © ${new Date().getFullYear()} AcquireLift · Google Ad Grant authority for nonprofits. All rights reserved.
   `,
 };
